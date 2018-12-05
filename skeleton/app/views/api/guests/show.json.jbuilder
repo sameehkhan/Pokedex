@@ -1,3 +1,2 @@
-# json.guest do
-  json.partial! 'guest', guest: @guest
-# end
+json.partial! 'guest', guest: @guest
+json.extract! @guest, :gifts 
