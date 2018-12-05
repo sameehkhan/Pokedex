@@ -1,1 +1,1 @@
-json.partial! 'gift', gift: gift
+json.partial! 'gift', gift: @gift
