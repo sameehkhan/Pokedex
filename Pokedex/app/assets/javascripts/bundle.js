@@ -175,7 +175,9 @@ function (_React$Component) {
       }, pokemon.map(function (poke) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           key: poke.id
-        }, poke.name);
+        }, poke.name, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: poke.image_url
+        }));
       }));
     }
   }]);
