@@ -164,13 +164,11 @@ function (_React$Component) {
   _createClass(PokemonIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      debugger;
       this.props.requestAllPokemon();
     }
   }, {
     key: "render",
     value: function render() {
-      debugger;
       var pokemon = this.props.pokemon;
       var pokemonItems = pokemon.map(function (poke) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pokemon_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -274,7 +272,9 @@ function (_React$Component) {
   _createClass(PokemonIndexItem, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, this.props.pokemon.name, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/pokemon/".concat(this.props.pokemon.id)
+      }, this.props.pokemon.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: this.props.pokemon.image_url
       }));
     }
