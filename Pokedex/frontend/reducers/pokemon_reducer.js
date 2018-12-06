@@ -9,6 +9,8 @@ const pokemonReducer = (oldState = _defaultState, action) => {
   switch(action.type){
     case RECEIVE_ALL_POKEMON:
       return action.pokemon;
+    case RECEIVE_ONE_POKEMON:
+      return action.pokemon;
     default:
       return oldState;
   }
