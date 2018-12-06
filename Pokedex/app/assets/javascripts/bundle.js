@@ -124,9 +124,9 @@ var requestAllPokemon = function requestAllPokemon() {
     });
   };
 };
-var requestOnePokemon = function requestOnePokemon() {
+var requestOnePokemon = function requestOnePokemon(id) {
   return function (dispatch) {
-    return _util_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchOnePokemon"]().then(function (pokemon) {
+    return _util_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchOnePokemon"](id).then(function (pokemon) {
       return dispatch(receiveOnePokemon(pokemon));
     });
   };
@@ -393,6 +393,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 document.addEventListener('DOMContentLoaded', function () {
   var root = document.getElementById('root');
   var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_2__["configureStore"])();
@@ -400,6 +401,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.dispatch = store.dispatch;
   window.selectAllPokemon = _reducers_selectors__WEBPACK_IMPORTED_MODULE_4__["selectAllPokemon"];
   window.requestAllPokemon = _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_3__["requestAllPokemon"];
+  window.requestOnePokemon = _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_3__["requestOnePokemon"];
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_5__["default"], {
     store: store
   }), root);
