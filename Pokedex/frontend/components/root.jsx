@@ -8,7 +8,7 @@ const store = configureStore();
 
 const Root = ({ store }) => (
   <Provider store={store}>
-    <PokemonIndexContainer/>
+    <PokemonIndexContainer />
   </Provider>
 );
 
