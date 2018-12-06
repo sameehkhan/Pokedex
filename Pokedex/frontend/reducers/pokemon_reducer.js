@@ -1,5 +1,5 @@
 import { RECEIVE_ALL_POKEMON } from '../actions/pokemon_actions';
-
+import { RECEIVE_ONE_POKEMON } from '../actions/pokemon_actions';
 const _defaultState = {
   pokemon: []
 };
