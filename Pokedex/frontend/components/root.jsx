@@ -10,8 +10,8 @@ const store = configureStore();
 
 const Root = ({ store }) => (
   <Provider store={store}>
-    <HashRouter></HashRouter>
-    <PokemonIndexContainer />
+    <HashRouter>
+      <Route path="/" component={PokemonIndexContainer} />
     </HashRouter>
   </Provider>
 );
