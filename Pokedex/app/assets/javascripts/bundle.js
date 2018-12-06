@@ -426,7 +426,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   pokemon: _pokemon_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
-  item: _items_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]
+  items: _items_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitiesReducer);
 
@@ -448,16 +448,13 @@ var _defaultState = {
   pokemon: []
 };
 
-constitemsReducer = function constitemsReducer() {
+var itemsReducer = function itemsReducer() {
   var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _defaultState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
-    case _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ALL_POKEMON"]:
-      return action.items;
-
     case _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ONE_POKEMON"]:
-      return action.items;
+      return action.pokemon.items;
 
     default:
       return oldState;
@@ -493,7 +490,7 @@ var pokemonReducer = function pokemonReducer() {
       return action.pokemon;
 
     case _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ONE_POKEMON"]:
-      return action.pokemon;
+      return action.pokemon.pokemon;
 
     default:
       return oldState;
@@ -518,7 +515,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  entities: _entities_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  entities: _entities_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  ui: uiReducer
 });
 /* harmony default export */ __webpack_exports__["default"] = (rootReducer);
 
