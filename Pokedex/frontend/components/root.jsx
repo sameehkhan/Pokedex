@@ -4,6 +4,7 @@ import { configureStore } from '../store/store';
 // import PokemonIndex from './pokemon/pokemon_index';
 import PokemonIndexContainer from './pokemon/pokemon_index_container';
 import { HashRouter, Route } from 'react-router-dom';
+import PokemonDetailContainer from './pokemon/pokemon_detail_container';
 
 
 const store = configureStore();
