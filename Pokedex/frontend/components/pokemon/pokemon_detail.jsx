@@ -3,13 +3,13 @@ import React from 'react';
 class PokemonDetail extends React.Component {
   componentDidMount() {
     const id = this.props.match.params.pokemonId;
-    this.props.requestOnePokemon();
+    this.props.requestOnePokemon(id);
   }
 
   render() {
     return (
       <section className="pokedetail">
-        <div> Hey Joanna </div>
+        <div> {this.props.pokemon.name} </div>
       </section>
     );
   }

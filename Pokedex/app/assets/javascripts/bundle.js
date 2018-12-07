@@ -180,14 +180,14 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       var id = this.props.match.params.pokemonId;
-      this.props.requestOnePokemon();
+      this.props.requestOnePokemon(id);
     }
   }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "pokedetail"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, " Hey Joanna "));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, " ", this.props.pokemon.name, " "));
     }
   }]);
 
@@ -219,9 +219,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
-  var pokemon = state.entities.pokemon[ownProps.match.params.pokemonId];
+  // const pokemon = state.entities.pokemon[ownProps.match.params.pokemonId];
   return {
-    pokemon: pokemon
+    pokemon: state.entities.pokemon[ownProps.match.params.pokemonId] || {}
   };
 };
 

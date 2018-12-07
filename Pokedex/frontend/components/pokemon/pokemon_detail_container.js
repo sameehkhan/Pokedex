@@ -5,9 +5,9 @@ import { requestOnePokemon } from '../../actions/pokemon_actions';
 import PokemonDetail from './pokemon_detail';
 
 const mapStateToProps = (state, ownProps) => {
-  const pokemon = state.entities.pokemon[ownProps.match.params.pokemonId];
+  // const pokemon = state.entities.pokemon[ownProps.match.params.pokemonId];
   return ({
-    pokemon
+    pokemon: state.entities.pokemon[ownProps.match.params.pokemonId] || {}
   }
   );
 };
